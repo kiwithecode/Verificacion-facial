@@ -186,9 +186,3 @@ En minutos, tu servicio estará corriendo y tendrás una URL pública para tu AP
 
 ---
 
-```
-
----
-
-¿Quieres que agregue ejemplos de llamada con *curl* o algún snippet de respuesta de la API?
-```
