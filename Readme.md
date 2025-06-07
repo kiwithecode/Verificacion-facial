@@ -21,17 +21,14 @@ La aplicación está contenerizada con **Docker** y se despliega en una arquitec
 
 ## Estructura del Proyecto
 
-````
-
-/
-├── uploads/              # Carpeta temporal para imágenes (creada automáticamente)
+** /
 ├── app.py                # Código principal de la aplicación Flask
 ├── Dockerfile            # Instrucciones para construir la imagen de Docker
 ├── requirements.txt      # Lista de dependencias de Python
 ├── .dockerignore         # Archivos a ignorar por Docker
-└── README.md             # Este archivo
-
-````
+└── README.md             # Este archivo 
+**
+---
 
 ---
 
