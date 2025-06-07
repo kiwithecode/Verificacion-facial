@@ -21,7 +21,7 @@ La aplicación está contenerizada con **Docker** y se despliega en una arquitec
 
 ## Estructura del Proyecto
 
-```
+````
 
 /
 ├── uploads/              # Carpeta temporal para imágenes (creada automáticamente)
