@@ -41,11 +41,6 @@ if not os.path.exists(UPLOAD_FOLDER):
 # --- FUNCIONES AUXILIARES ---
 
 def improve_image(input_path):
-    """
-    Mejora la calidad de una imagen para facilitar la detección de rostros.
-    - Redimensiona manteniendo la proporción.
-    - Aplica mejoras moderadas de contraste y nitidez.
-    """
     try:
         img = Image.open(input_path).convert('RGB')
         img.thumbnail((800, 800), Image.LANCZOS)
@@ -64,24 +59,12 @@ def improve_image(input_path):
         return input_path
 
 def detect_and_crop_id_photo_area(image_path, generated_files_list):
-    """
-    [FUNCIÓN AVANZADA - NO IMPLEMENTADA]
-    Esta es la función IDEAL para procesar la cédula.
-    1. Usaría OpenCV y Template Matching para encontrar las coordenadas de la foto dentro de la cédula.
-    2. Recortaría esa región específica.
-    3. Pasaría solo esa región a la detección de rostros.
-    Esto evitaría la confusión por sellos, texto u hologramas.
-    
-    Por ahora, solo llama a la función genérica como respaldo.
-    """
+   
     print("Usando método de detección genérico para la cédula. Para mayor precisión, implemente 'detect_and_crop_id_photo_area'.")
     return crop_face(image_path, generated_files_list, "cédula")
 
 def crop_face(image_path, generated_files_list, image_type="imagen"):
-    """
-    Detecta, recorta y guarda el rostro de una imagen genérica (selfie).
-    Prueba con múltiples backends de detección si es necesario.
-    """
+    
     try:
         improved_image_path = improve_image(image_path)
         if improved_image_path != image_path:
